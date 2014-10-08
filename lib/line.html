@@ -16,7 +16,7 @@
     <script src="js/line.js"></script>
     <script>
       (function() {
-        var chartData = [5,20,10,40,5,2,];
+        var chartData = [5, 20, 10, 40, 5, 2, 12, 24, 39, 20, 25];
 
         var chart = new LineGraph('chart', chartData);
         chart.init();
@@ -28,7 +28,7 @@
           var max = 100;
           var min = 1;
           var rand = Math.random() * (max - min) + min;
-          chart.addPoint(rand, true);
+          chart.addPoint(rand);
         })
       })();
     </script>
