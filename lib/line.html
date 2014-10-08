@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Line Graph: D3 Experiments</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <div>
+      <a href="#" id="add_point">Add Random Data Point</a>
+    </div>
+
+    <div id="chart"></div>
+
+    <script src="../bower_components/d3/d3.js" charset="utf-8"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="js/line.js"></script>
+    <script>
+      (function() {
+        var chartData = [5,20,10,40,5,2,];
+
+        var chart = new LineGraph('chart', chartData);
+        chart.init();
+
+        var addLink = document.getElementById('add_point');
+
+        addLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          var max = 100;
+          var min = 1;
+          var rand = Math.random() * (max - min) + min;
+          chart.addPoint(rand);
+        })
+      })();
+    </script>
+
+  </body>
+</html>

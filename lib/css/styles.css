@@ -1,0 +1,10 @@
+#chart {
+  width: 1000px;
+  height: 500px;
+  background: #eee;
+}
+
+#chart > svg {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "D3 Experiments",
+  "version": "0.0.1",
+  "authors": [
+    "Nathan Hackley <nathanhackley@gmail.com>"
+  ],
+  "description": "D3 Charting Classes",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "d3": "~3.4.11",
+    "underscore": "~1.7.0"
+  }
+}
