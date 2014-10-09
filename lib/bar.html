@@ -1,7 +1,6 @@
 <html>
   <head>
-    <title>D3 + Angular: D3 Experiments</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Bar Graph: D3 Experiments</title>
   </head>
   <body>
 
@@ -15,18 +14,18 @@
 
     <div id="wrapper"></div>
 
-    <script src="../bower_components/d3/d3.js" charset="utf-8"></script>
+    <script src="d3/d3.js" charset="utf-8"></script>
     <script src="js/bar.js"></script>
     <script>
       (function(){
         // starter data
         var data = [
-          {value: 5, color: 'red', name: 'red ones'},
-          {value: 10, color: 'blue', name: 'blue ones'},
-          {value: 20, color: 'green', name: 'green ones'},
-          {value: 25, color: 'teal', name: 'teal ones'},
-          {value: 30, color: 'orange', name: 'orange ones'},
-          {value: 50, color: 'purple', name: 'purple ones'},
+          { value: 5,   color: 'red',     name: 'red ones'    },
+          { value: 10,  color: 'blue',    name: 'blue ones'   },
+          { value: 20,  color: 'green',   name: 'green ones'  },
+          { value: 25,  color: 'teal',    name: 'teal ones'   },
+          { value: 30,  color: 'orange',  name: 'orange ones' },
+          { value: 50,  color: 'purple',  name: 'purple ones' }
         ];
 
         // initiate a new bar chart instance
