@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>D3 + Angular: D3 Experiments</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <div>
+      <form id="add_data">
+        <input type="text" id="new_data_value" placeholder="value" required>
+        <input type="text" id="new_data_color" placeholder="color" required>
+        <button>Add!</button>
+      </form>
+    </div>
+
+    <div id="wrapper"></div>
+
+    <script src="../bower_components/d3/d3.js" charset="utf-8"></script>
+    <script src="js/binding.js"></script>
+    <script>
+      (function(){
+        // starter data
+        var data = [
+          {value: 5, color: 'red'},
+          {value: 10, color: 'blue'},
+          {value: 20, color: 'green'},
+          {value: 25, color: 'teal'},
+          {value: 30, color: 'orange'},
+          {value: 50, color: 'purple'},
+        ];
+
+        // initiate a new bar chart instance
+        var chart = new BarChart("#wrapper");
+        chart.init(data);
+
+        /**
+         * Add a new data point to the chart
+         * via the public addData() method
+         */
+        var form = document.getElementById('add_data');
+        form.addEventListener("submit", function(e){
+          e.preventDefault();
+          var newData = {
+            value: document.getElementById('new_data_value').value,
+            color: document.getElementById('new_data_color').value
+          }
+          chart.addData(newData);
+        });
+      })();
+    </script>
+
+  </body>
+</html>
