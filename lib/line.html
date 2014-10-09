@@ -11,34 +11,63 @@
         width: 100%;
         height: 100%;
       }
+
+      .axis path,
+      .axis line {
+          fill: none;
+          stroke: black;
+          shape-rendering: crispEdges;
+      }
+
+      .axis text {
+          font-family: sans-serif;
+          font-size: 11px;
+      }
     </style>
   </head>
   <body>
 
     <div>
-      <a href="#" id="add_point">Add Random Data Point</a>
+      <form id="add_data">
+        <input type="text" id="new_data_value" placeholder="value" required>
+        <input type="text" id="new_data_date" placeholder="date" required>
+        <button>Add!</button>
+      </form>
     </div>
 
-    <div id="chart"></div>
+    <div id="wrapper"></div>
 
     <script src="d3/d3.js" charset="utf-8"></script>
     <script src="js/line.js"></script>
     <script>
-      (function() {
-        var chartData = [5, 20, 10, 40, 5, 2, 12, 24, 39, 20, 25];
+      (function(){
+        // starter data
+        var data = [
+          { value: 5,   date: 1 },
+          { value: 20,  date: 2 },
+          { value: 20,  date: 3 },
+          { value: 100,  date: 4 },
+          { value: 20,  date: 5 },
+          { value: 50,  date: 7 }
+        ];
 
-        var chart = new LineGraph('chart', chartData);
-        chart.init();
+        // initiate a new bar chart instance
+        var chart = new LineChart("#wrapper");
+        chart.init(data);
 
-        var addLink = document.getElementById('add_point');
-
-        addLink.addEventListener('click', function(e) {
+        /**
+         * Add a new data point to the chart
+         * via the public addData() method
+         */
+        var form = document.getElementById('add_data');
+        form.addEventListener("submit", function(e){
           e.preventDefault();
-          var max = 100;
-          var min = 1;
-          var rand = Math.random() * (max - min) + min;
-          chart.addPoint(rand);
-        })
+          var newData = {
+            value: document.getElementById('new_data_value').value,
+            date: document.getElementById('new_data_date').value
+          }
+          chart.addData(newData);
+        });
       })();
     </script>
 
