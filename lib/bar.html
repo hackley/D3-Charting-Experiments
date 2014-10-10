@@ -1,6 +1,17 @@
 <html>
   <head>
     <title>Bar Graph: D3 Experiments</title>
+    <style>
+      #wrapper {
+        width: 100%;
+        height: 200px;
+      }
+
+      #wrapper > svg {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
   <body>
 
@@ -29,7 +40,7 @@
         ];
 
         // initiate a new bar chart instance
-        var chart = new BarChart("#wrapper");
+        var chart = new BarChart("wrapper");
         chart.init(data);
 
         /**
