@@ -2,8 +2,13 @@
   <head>
     <title>Line Graph: D3 Experiments</title>
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
       #wrapper {
-        width: 60%;
+        width: 100%;
         height:200px;
       }
 
@@ -63,7 +68,7 @@
           { value: 50,  date: 6 }
         ];
 
-        // initiate a new bar chart instance
+        // initiate a new line chart instance
         var chart = new LineChart("wrapper");
         chart.init(data);
 
