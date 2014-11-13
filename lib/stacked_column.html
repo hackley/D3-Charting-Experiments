@@ -7,6 +7,11 @@
         padding: 20px;
       }
 
+      button {
+        display: block;
+        margin: 0 auto;
+      }
+
       #wrapper {
         width: 100%;
         max-width: 1300px;
@@ -40,17 +45,13 @@
   </head>
   <body>
 
-    <div>
-      <button id="add_data">Add September!</button>
-    </div>
-
+    <button id="add_data">Add September!</button>
     <div id="wrapper"></div>
 
     <script src="d3/d3.js" charset="utf-8"></script>
     <script src="js/stacked_column.js"></script>
     <script>
       (function(){
-        // starter data
         var data = [
           {
             groups: [
