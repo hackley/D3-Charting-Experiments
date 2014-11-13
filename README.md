@@ -9,5 +9,9 @@ D3 Charting Experiments
 - Visit [localhost:9000/line.html](localhost:9000/line.html) or [localhost:9000/bar.html](localhost:9000/bar.html)
 
 
-**References**
-- [Creating Simple Line and Bar Charts Using D3.js (sitepoint.com)](http://www.sitepoint.com/creating-simple-line-bar-charts-using-d3-js/)
+## TODO
+
+#### Stacked Column Chart
+- "Currency" display option
+- hover to display value / additional labels
+- "min-column-width" options + overflow support (maybe)
