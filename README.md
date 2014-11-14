@@ -12,6 +12,5 @@ D3 Charting Experiments
 ## TODO
 
 #### Stacked Column Chart
-- "Currency" display option
 - hover to display value / additional labels
-- "min-column-width" options + overflow support (maybe)
+- `min-column-width` option + overflow support (maybe)
