@@ -40,6 +40,20 @@
         border-radius: 3px;
         color: #FFF;
         z-index: 99;
+        /*transform: translate(-50%, -35px);*/
+      }
+
+      .tooltip:after {
+        content: "";
+        width: 0;
+      	height: 0;
+      	border-left: 5px solid transparent;
+      	border-right: 5px solid transparent;
+    	  border-top: 5px solid black;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        margin-left: -5px;
       }
 
       .axis path,
