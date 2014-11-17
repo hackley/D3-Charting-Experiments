@@ -35,12 +35,18 @@
       .tooltip {
         transition: opacity 200ms ease;
         display: inline-block;
-        background: #000;
+        background: rgba(0, 0, 0, 0.8);
         padding: 10px;
         border-radius: 3px;
         color: #FFF;
         z-index: 99;
-        /*transform: translate(-50%, -35px);*/
+        transform: translate(-50%, -50px);
+        font-family: sans-serif;
+      }
+
+      .tooltip span {
+        overflow: hidden;
+        white-space: nowrap;
       }
 
       .tooltip:after {
@@ -54,6 +60,10 @@
         bottom: -5px;
         left: 50%;
         margin-left: -5px;
+      }
+
+      .tooltip-label:after {
+        content: " - ";
       }
 
       .axis path,
